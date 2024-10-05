@@ -1,4 +1,5 @@
 # Hubtel Blog Testing Suite
+![Hubtel Blog Logo](images/images.png)
 
 ## Overview
 
