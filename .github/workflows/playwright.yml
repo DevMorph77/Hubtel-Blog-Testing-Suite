@@ -24,24 +24,21 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    - name: Run Playwright tests
-      run: npx playwright test
-
-    - name: Generate Report
-      run: npx playwright show-report
+    - name: Run Playwright tests and generate HTML report
+      run: npx playwright test --reporter=html  # Generate HTML report directly
 
     - name: Commit and Push Report
       run: |
-        git config --local user.email "kwytechdev@gmail.com"  # Replace with your email
-        git config --local user.name "DevMorph77"          # Replace with your name
-        git add playwright-report/index.html                # Add the specific file you want to update
-        git commit -m "Update Playwright report"           # Commit the change
-        git push origin HEAD:master                           # Push to the master branch
+        git config --local user.email "kwytechdev@gmail.com"  # Use your email
+        git config --local user.name "DevMorph77"              # Use your name
+        git add playwright-report/                               # Add the entire report folder
+        git commit -m "Update Playwright report"                # Commit the change
+        git push origin HEAD:master                             # Push to the master branch
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          # Use the token provided by GitHub
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}              # Use the token provided by GitHub
 
     - uses: actions/upload-artifact@v4
       with:
         name: playwright-report
-        path: playwright-report/                            # Upload the entire report directory as an artifact
-        retention-days: 30                                  # Keep the artifact for 30 days
+        path: playwright-report/                                # Upload the entire report directory as an artifact
+        retention-days: 30                                      # Keep the artifact for 30 days
