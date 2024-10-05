@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Hubtel Blog Testing Suite is a collection of automated tests designed to validate key functionalities of the Hubtel blog. Utilizing the Playwright framework, this suite ensures that critical components of the blog, including navigation links, articles, and app download links, are working as intended. 
+The Hubtel Blog Testing Suite is a collection of automated tests designed to validate key functionalities of the Hubtel blog. Utilizing the Playwright framework, this suite ensures that critical components of the blog, including navigation links, articles, and app download links, are working as intended. This project is also integrated with GitHub Actions for continuous testing and reporting.
 
 ## Features
 
@@ -16,6 +16,7 @@ The Hubtel Blog Testing Suite is a collection of automated tests designed to val
 
 - [Playwright](https://playwright.dev/) - A Node.js library for automating browser actions.
 - JavaScript - The programming language used to implement the test scripts.
+- GitHub Actions - For automating the testing process on code changes.
 
 ## Installation
 
@@ -36,11 +37,20 @@ To set up and run this testing suite, ensure you have [Node.js](https://nodejs.o
 
 ## Usage
 
-To execute the test suite, run the following command:
+To execute the test suite locally, run the following command:
 
 ```bash
 npx playwright test
 ```
+
+### Continuous Integration
+
+This project is set up with GitHub Actions to automatically run the Playwright tests on every push and pull request to the `main` or `master` branches. The workflow includes:
+
+- **Node.js Setup**: Automatically installs Node.js and the project dependencies.
+- **Playwright Browsers Installation**: Ensures the necessary browsers are installed for testing.
+- **Automated Testing**: Runs the Playwright tests and uploads the results for easy access.
+- **Artifact Management**: Test reports are stored for 30 days to track testing outcomes over time.
 
 ## Test Scripts Overview
 
