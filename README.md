@@ -25,7 +25,7 @@ To set up and run this testing suite, ensure you have [Node.js](https://nodejs.o
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/hubtel-blog-testing-suite.git
+   git clone https://github.com/DevMorph77/hubtel-blog-testing-suite.git
    cd hubtel-blog-testing-suite
    ```
 
