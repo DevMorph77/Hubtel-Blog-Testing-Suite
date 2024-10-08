@@ -24,7 +24,7 @@ const { test, expect } = require('@playwright/test');
   
   test('Check main news article is present', async ({ page }) => {
    
-    test.setTimeout(60000);
+    test.setTimeout(40000);
   
    
     await page.goto('https://blog.hubtel.com/', { waitUntil: 'networkidle' });
