@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-  
+  test.describe('Hubtel blog test suite' , async()=>{
   test('Test footer app download links', async ({ page }) => {
     test.setTimeout(60000); 
     await page.goto('https://blog.hubtel.com/category/press-releases/');
@@ -123,7 +123,7 @@ const { test, expect } = require('@playwright/test');
       });
       await expect.soft(page.getByRole('heading', { name: 'Inside Hubtel' })).toBeVisible();
       });
-
+  });
 
   
   
