@@ -24,7 +24,7 @@ const { test, expect } = require('@playwright/test');
   
   test('Check main news article is present', async ({ page }) => {
    
-    test.setTimeout(60000);// this is a time out comment i ve set
+    test.setTimeout(60000);// this is a time out comment i ve set and it is still for testing yes
   
    
     await page.goto('https://blog.hubtel.com/', { waitUntil: 'networkidle' });
